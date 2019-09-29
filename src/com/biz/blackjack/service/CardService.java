@@ -1,6 +1,7 @@
 package com.biz.blackjack.service;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.biz.blackjack.domain.CardVO;
@@ -17,6 +18,10 @@ public class CardService {
 	}
 
 	public List<CardVO> getCardList() {
+		
+		for(int i = 0 ; i < 51 ; i++) {
+			Collections.shuffle(cardList);
+		}
 		return cardList;
 	}
 	
@@ -38,15 +43,19 @@ public class CardService {
 				int intValue = 0;
 				try {
 					 intValue = Integer.valueOf(n);
-					
+					 if(intValue == 0) intValue = 10;
 				} catch (Exception e) {
+					if(n.equals("A")) {
+						intValue = 1;
+					}else { 
+						intValue = 10; }
 					
-					if(n.equals("A")) intValue = 1;
-					else { intValue = 10; }
 				}
 				
 				vo.setValue(intValue);
 				cardList.add(vo);
+				
+			
 			}
 			
 		}

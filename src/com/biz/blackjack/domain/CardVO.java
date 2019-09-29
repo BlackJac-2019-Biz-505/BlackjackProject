@@ -45,7 +45,7 @@ public class CardVO {
 
 	@Override
 	public String toString() {
-		return "CardVO [pattern=" + pattern + ", cardNum=" + cardNum + ", value=" + value + "]";
+		return "[" + pattern + cardNum + ", 점수 : " + value + "]";
 	}
 	
 
