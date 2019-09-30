@@ -56,7 +56,6 @@ public class RuleService {
 			
 		}else if(playName.equals("딜러") && playName.equals("플레이어") && this.sumValue() > 22) {
 			System.out.println("두 플레이어의 카드 합이 모두 21을 초과했습니다");
-			System.out.println("게임을 다시 진행합니다");
 			return;
 		}
 		

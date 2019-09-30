@@ -29,8 +29,7 @@ public class BlackJackEx {
 					
 					dealer.hitvoid();
 					player.hitvoid();
-					dealer.overValue(); 
-					player.overValue();
+					
 					
 					while (true) {
 						System.out.println("----------------------------------------");
@@ -47,6 +46,10 @@ public class BlackJackEx {
 								
 							}
 							if (intMenu == 1) {
+								dealer.hitvoid();
+								player.hitvoid();
+								dealer.overValue();
+								player.overValue();
 								
 							}
 							int dSum = dealer.sumValue();
